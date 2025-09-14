@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IBS - International Bus Simulator</title>
+  <style>
+    * {box-sizing:border-box;margin:0;padding:0;font-family:Arial, sans-serif;}
+    body {
+      min-height:100vh;
+      background:url('logo.png') no-repeat center center/cover;
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      overflow-x:hidden;
+    }
+    header {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 40px;
+      background:rgba(0,0,0,0.6);
+    }
+    header h1 {
+      color:#00ff99;
+      font-size:26px;
+      letter-spacing:1px;
+    }
+    nav a {
+      color:#00ff99; /* Updated color */
+      text-decoration:none;
+      margin-left:18px;
+      font-weight:700;
+    }
+    .hero {
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px;
+      text-shadow:2px 2px 10px rgba(5, 216, 33, 0.733);
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero h2{
+      font-size:56px;
+      margin-bottom:6px;
+      color:#00ff99; /* neon green */
+      animation: fadeInUp 2s ease forwards;
+    }
+    .hero .sub{
+      font-size:18px;
+      margin-bottom:18px;
+      color:#00ff99; /* neon green */
+      animation: fadeInUp 2s ease 0.5s forwards;
+      opacity:0;
+    }
+    .btn{
+      background:#00ff99;color:#000;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin:0 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 2s ease 1s forwards;
+      opacity:0;
+    }
+    .btn:hover{
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #00ff99;
+    }
+    .btn-container{display:flex;justify-content:center;align-items:center;margin-top:12px;}
+    footer{
+      padding:16px;text-align:center;background:rgba(0,0,0,0.6);
+      margin-top:auto;
+      color:#00ff99; /* Updated color */
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0%{opacity:0}
+      100%{opacity:1}
+    }
+    @keyframes fadeInUp {
+      0%{opacity:0; transform: translateY(20px);}
+      100%{opacity:1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IBS</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="downloads.html">Download</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h2>INTERNATIONAL BUS SIMULATOR</h2>
+    <p class="sub">ইচ্ছে করলে নিচের বাটন টিপে ডাউনলোড পেজে যাও</p>
+    <div class="btn-container">
+      <a class="btn" href="downloads.html">DOWNLOAD</a>
+      <a class="btn" href="https://discord.gg/gxqc58HsSA" target="_blank">JOIN DISCORD</a>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> IBS — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
